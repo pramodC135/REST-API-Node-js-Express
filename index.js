@@ -17,6 +17,10 @@ app.get('/api/posts/:year/:month', (req, res) => {
     res.send(req.params);
 });
 
+app.get('/api/postssortby/:year/:month', (req, res) => {
+    res.send(req.query);
+});
+
 //PORT
 const port = process.env.PORT || 3000;
 app.listen(port,() => console.log(`Listening on port ${port}...`));
